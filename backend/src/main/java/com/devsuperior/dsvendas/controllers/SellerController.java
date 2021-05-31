@@ -22,6 +22,5 @@ public class SellerController {
 	public ResponseEntity<List<SellerDTO>> findAll(){
 		List<SellerDTO> list = service.findAll();
 		return ResponseEntity.ok(list);// oke responta 400
-		
 	} 
 }

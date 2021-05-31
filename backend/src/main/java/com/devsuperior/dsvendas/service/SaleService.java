@@ -32,6 +32,8 @@ public class SaleService {
 		Page<Sale> result =  repository.findAll(pageable);
 		return result.map(x -> new SaleDTO(x));
 	}
+	
+
 
 	@Transactional(readOnly = true)
 	public List<SaleSumDTO> amountGroupedBySeller(){
@@ -42,4 +44,6 @@ public class SaleService {
 	public List<SaleSuccessDTO> successGroupedBySeller(){
 		return repository.successGroupedBySeller();
 	}
+	
+	
 }
